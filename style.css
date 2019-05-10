@@ -1,0 +1,45 @@
+#myInput {
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 87%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    margin-bottom: 12px;
+}
+
+#myTable {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    border: 5px solid crimson;
+    border-radius: 13px;
+    border-spacing: 0;
+}
+
+#myTable th,
+#myTable td {
+    text-align: left;
+    padding: 12px;
+}
+
+myTable tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header,
+#myTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+.container {
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+    background-color: #f9ca24;
+}
+
+.text {
+    font-family: cursive;
+    text-align: center;
+}

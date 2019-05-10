@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text">DATA SWAPI</h2>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search By Name or Terrain....">
+
+
+        <table id="myTable">
+            <tr class="header">
+                <th style="width:60%">Name</th>
+                <th style="width:40%">Rotation Period</th>
+                <th style="width:40%">Orbital Period</th>
+                <th style="width:60%">Terrain</th>
+            </tr>
+            <tr>
+                <td>Alderaan</td>
+                <td>24</td>
+                <td>364</td>
+                <td>Forest</td>
+            </tr>
+            <tr>
+                <td>Yavin IV</td>
+                <td>24</td>
+                <td>4818</td>
+                <td>Mountains</td>
+            </tr>
+            <tr>
+                <td>Hoth</td>
+                <td>24</td>
+                <td>549</td>
+                <td>Lake</td>
+            </tr>
+            <tr>
+                <td>Dagobah</td>
+                <td>23</td>
+                <td>341</td>
+                <td>Gas Giant</td>
+            </tr>
+            <tr>
+                <td>Bespin</td>
+                <td>12</td>
+                <td>5119</td>
+                <td>Swamp</td>
+            </tr>
+            <tr>
+                <td>Endor</td>
+                <td>18</td>
+                <td>402</td>
+                <td>Jungles</td>
+            </tr>
+            <tr>
+                <td>Naboo</td>
+                <td>26</td>
+                <td>312</td>
+                <td>Grass Hills</td>
+            </tr>
+            <tr>
+                <td>Coruscant</td>
+                <td>24</td>
+                <td>368</td>
+                <td>Forest</td>
+            </tr>
+            <tr>
+                <td>Kamino</td>
+                <td>27</td>
+                <td>463</td>
+                <td>Jungles</td>
+            </tr>
+            <tr>
+                <td>Geonosis</td>
+                <td>30</td>
+                <td>256</td>
+                <td>Mountains</td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <script>
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                ti = tr[i].getElementsByTagName("td")[3];
+
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        // tr[i].style.display = "none";
+                        txtValue = ti.textContent || ti.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
